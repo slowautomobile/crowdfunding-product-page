@@ -9,8 +9,7 @@
 body {
   font-size: 16px;
   position: relative;
-  /* background-color: #FAFAFA; */
-  background-color: #b88787;
+  background-color: #fafafa;
 }
 
 /* Header style */
@@ -48,7 +47,7 @@ body {
   margin-left: 1rem;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  transition: border .2s;
+  transition: border 0.2s;
 }
 
 .menu-item:hover {
@@ -68,11 +67,7 @@ body {
   position: relative;
   top: 140px;
   max-width: 730px;
-  /* width: 100%; */
   margin: 0 auto;
-  /* padding: 3rem; */
-  height: 500px;
-  /* background-color: #fff; */
 }
 
 .main-container > * {
@@ -87,17 +82,15 @@ body {
 }
 
 .card:last-of-type {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .product-title-card {
   text-align: center;
   position: relative;
-  /* z-index: 0; */
 }
 
 .card-wrapper {
-  /* align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column; */
@@ -107,7 +100,6 @@ body {
 .small-logo {
   position: relative;
   top: -4.3rem;
-  /* margin-bottom: -4.7rem; */
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -186,7 +178,6 @@ body {
 .bookmark-btn-wrapper .large-btn {
   width: 174px;
   padding-left: 3rem;
-  /* text-align:end; */
   background-color: #f4f4f4;
   color: #7a7a7a;
 }
@@ -210,7 +201,6 @@ body {
 }
 
 .stats-item {
-  /* flex-grow: 1; */
   width: 33.33%;
   border-right: 1px solid #d3d3d3;
   padding: 0 2rem;
@@ -236,10 +226,8 @@ body {
 
 .fund-indicator {
   height: 0.75rem;
-  /* margin-top: 2rem; */
   border-radius: 1rem;
   background-color: #f4f4f4;
-  /* z-index: -1; */
 }
 
 .fund-indicator.active {
@@ -284,7 +272,7 @@ body {
 .pledge {
   font-size: 0.9375rem;
   color: #3cb3ab;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .offer > p {
@@ -316,14 +304,238 @@ body {
   background-color: #979797;
 }
 
+/* Products Modal */
+.products-modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(100% + 140px);
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-body {
+  top: 184px;
+}
+
+.modal-body .offers .card {
+  padding: 2rem 1.75rem;
+}
+
+.modal-card {
+  position: relative;
+}
+
+#close-modal-bar {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: #999999;
+}
+
+.modal-card .offer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.radio-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.radio-wrapper label {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.radio-wrapper label:hover {
+  color: #3cb3ab;
+  cursor: pointer;
+}
+
+input {
+  appearance: none;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  border: none;
+  background-color: white;
+  outline: 1px solid #d9d9d9;
+}
+
+input:checked {
+  background-color: #3cb3ab;
+  border: 6px solid white;
+}
+
+.not-active label:hover {
+  cursor: default;
+  color: #000;
+}
+
+.pledge-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.0625rem;
+}
+
+.pledge-flex .product-pledge {
+  width: max-content;
+  gap: 1.5rem;
+}
+
+.products .subtitle {
+  margin-left: 0;
+}
+
+.modal-body .subtitle {
+  margin-top: 0;
+  margin-left: 3.2rem;
+}
+
+.modal-card .about .subtitle {
+  margin-top: 1rem;
+}
+
+.modal-card .products-left {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 2rem;
+  font-size: 1.125rem;
+}
+
+.products .products-left .subtitle {
+  line-height: 2.6;
+}
+
+.products-left .subtitle {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  display: inline;
+  vertical-align: text-top;
+}
+
+.pledge-form {
+  position: relative;
+  width: 100%;
+}
+
+.pledge-form .reward-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.div-line {
+  position: relative;
+  margin: 1rem auto 2rem auto;
+  left: -1.7rem;
+  width: calc(100% + 3.5rem);
+  border-top: 1px solid #d9d9d9;
+}
+
+.pledge-form .subtitle {
+  font-size: 0.9375rem;
+  margin-left: 0;
+}
+
+form.card-flex {
+  gap: 1rem;
+  padding-top: 0;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-placeholder {
+  color: #bfbfbf;
+  font-size: 0.875rem;
+  font-weight: 700;
+  position: absolute;
+  top: .95rem;
+  left: 1.7rem;
+}
+
+.input-btn {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  border-radius: 15rem;
+  padding: 1rem 1.5rem 1rem 2.8rem;
+  transition: background-color 0.2s;
+  caret-color: #3cb3ab;
+  border: 1px solid #d9d9d9;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.input-btn:focus {
+  border: 1px solid #3cb3ab00;
+  outline: 2px solid #3cb3ab;
+}
+
+.pledge-form .large-btn {
+  width: 107px;
+  height: 3rem;
+}
+
+.modal-card .offer-selected {
+  outline: 2px solid #3cb3ab;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.hide-modal {
+  display: none;
+}
+
+/* Thanks Modal */
+.thanks-modal {
+  position: relative;
+  top: 184px;
+  margin: 0 auto;
+  max-width: 540px;
+  text-align: center;
+}
+
+.checked-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 3rem auto;
+  background-color: #3cb3ab;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.6rem;
+  color: white;
+}
+
+.thanks-modal p:first-of-type {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.thanks-modal .large-btn {
+  margin-top: 3rem;
+  width: 107px;
+}
+
 @media (max-width: 1108px) {
   /* Header style */
   .header-container {
     max-width: 100%;
     padding: 2rem 1.8rem;
-  }
-  .logo {
-    /* margin-bottom: .4rem; */
   }
   .logo-text {
     font-size: 1.7rem;
@@ -332,6 +544,12 @@ body {
   /* Main style */
   .main-container {
     padding: 2rem 1.8rem;
+  }
+
+  /* Modal */
+  .div-line {
+    left: -1.8rem;
+    width: calc(100% + 3.6rem);
   }
 }
 
@@ -343,7 +561,6 @@ body {
   .banner-img {
     width: 150%;
     height: 300px;
-    /* left: calc(-0.2 * 120vw); */
     left: -25%;
   }
   .navbar {
@@ -357,7 +574,6 @@ body {
     width: 100%;
     min-width: 327px;
     background-color: #fff;
-    /* height: 212px; */
     display: flex;
     flex-direction: column;
     border-radius: 8px;
@@ -370,7 +586,6 @@ body {
     font-size: 1.2rem;
     font-weight: 500;
     border-bottom: 1px solid #d3d3d3;
-    /* border-radius: 8px; */
   }
   .menu-item:first-of-type {
     border-top-left-radius: 8px;
@@ -399,12 +614,12 @@ body {
     position: absolute;
     top: 0.5rem;
     right: 0;
-    /* display: block; */
+    display: block;
   }
 
   #menu-bar:hover {
     color: #d3d3d3;
-    /* font-size: 1.2rem; */
+    cursor: pointer;
   }
 
   #close-menu-bar {
@@ -417,10 +632,11 @@ body {
 
   #close-menu-bar:hover {
     color: #d3d3d3;
+    cursor: pointer;
   }
 
   .hide {
-    /* visibility: hidden; */
+    visibility: hidden;
   }
 
   /* Main style */
@@ -431,7 +647,6 @@ body {
 
   .card {
     padding: 2.5rem 1.5rem;
-    /* margin: 0 1.5rem;  */
   }
 
   .small-logo {
@@ -469,9 +684,7 @@ body {
   .stats-item {
     width: 100%;
     padding: 1.5rem 0;
-    /* margin: 1rem 0; */
     border-right: none;
-    /* border-bottom: 1px solid #d3d3d3; */
     border: none;
   }
 
@@ -489,13 +702,14 @@ body {
     border: 0;
     border-top: 1px solid #d3d3d3;
     margin: 0 auto;
-    /* padding: 0 3rem; */
     width: 80px;
   }
 
   .about .subtitle {
     margin: 1.5rem 0 2rem 0;
   }
+
+
 
   .product-pledge {
     flex-direction: column;
@@ -517,12 +731,53 @@ body {
     padding-top: 1.2rem;
   }
 
-  /* 
-  .stats-item:first-of-type {
-    padding-left: 0;
+  /* Products Modal */
+  .modal-card {
+    top: 14rem;
+  }
+
+  .modal-card .radio-wrapper {
+    gap: 1rem;
+  }
+
+  .modal-card .radio-wrapper label {
+    font-size: 0.875rem;
+  }
+
+  .modal-card .pledge {
+    font-size: 0.875rem;
   }
   
-  .stats-item:last-of-type {
-    border: none;
-  } */
+  .modal-card .products-left {
+    position: relative;
+    padding: .5rem 0 0 0;
+    font-size: 1.125rem;
+  }
+
+  .modal-body .offers .card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .modal-body .subtitle {
+    margin-left: 0;
+  }
+  
+  .pledge-flex .product-pledge {
+    gap: .5rem;
+  }
+
+  .div-line {
+    margin: 1rem auto 1rem auto;
+}
+
+/* Thank Modal */
+.thanks-modal {
+  max-width: 327px;
+}
+.thanks-modal .card {
+  padding: 2rem 1.5rem;
+  max-width: 327px;
+}
+
+
 }
