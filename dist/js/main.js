@@ -119,38 +119,7 @@ const confirmPledges = document.getElementsByClassName('confirm-pledge');
 const inputBtns = document.getElementsByClassName('input-btn');
 
 for (let i = 0; i < confirmPledges.length; i++) {
-  confirmPledges[i].addEventListener('click', () => {
-    if (!i) {
-      totalBackersEl.textContent = ++totalBackers;
-      showThanks();
-    } else {
-      if (!inputBtns[i].value) {
-        moneyRaised += +inputBtns[i].getAttribute('value');
-      } else {
-        moneyRaised += parseInt(inputBtns[i].value);
-      }
-      
-      moneyRaisedEl.textContent = `$${moneyRaised}`;
-      totalBackersEl.textContent = ++totalBackers;
-
-      currentProduct = --productsLeft[`products${i}Left`];
-      productsLeftEls[`product${i}LeftEl`].textContent = currentProduct;
-      modalProductsLeftEls[i - 1].textContent = currentProduct;
-      inputBtns[i].value = '';
-
-      if(currentProduct === 0) {
-        modalOffersEls[i].classList.add('not-active');
-        productOffersEls[i - 1].classList.add('not-active');
-        pledgeForms[i].classList.add('hide');
-        radioBtns[i].setAttribute('disabled', true);
-        confirmPledges[i].disabled = true;
-        rewardButtons[i - 1].disabled = true;
-      }
-
-      fundIndicatorUpdate();
-      showThanks();
-    }
-  });
+  confirmPledges[i].addEventListener('click', () => confirmAndDisable(i));
 }
 
 window.onclick = e => {
