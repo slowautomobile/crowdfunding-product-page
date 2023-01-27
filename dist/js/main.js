@@ -1,3 +1,5 @@
+'use strict'
+
 // Menu elements
 const menu = document.querySelector('.menu');
 const menuBar = document.getElementById('menu-bar');
