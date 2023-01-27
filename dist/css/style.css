@@ -1,4 +1,8 @@
 /* Common style */
+:root {
+  hegiht: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +37,7 @@ body {
   align-items: center;
   position: relative;
   color: #fff;
+  z-index: 3;
 }
 
 .logo-text {
@@ -59,7 +64,7 @@ body {
 }
 
 #close-menu-bar {
-  display: none;
+  /* display: none; */
 }
 
 /* Main content style */
@@ -328,11 +333,15 @@ body {
   position: relative;
 }
 
-#close-modal-bar {
+#close-modal-xmark {
   position: absolute;
   top: 2rem;
   right: 2rem;
   color: #999999;
+}
+
+#close-modal-xmark {
+  cursor: pointer;
 }
 
 .modal-card .offer {
@@ -413,16 +422,17 @@ input:checked {
   font-size: 1.125rem;
 }
 
-.products .products-left .subtitle {
-  line-height: 2.6;
+.products-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
 }
 
 .products-left .subtitle {
   margin: 0;
   font-size: 0.9375rem;
-  line-height: 1.4;
-  display: inline;
-  vertical-align: text-top;
+
 }
 
 .pledge-form {
@@ -494,7 +504,7 @@ form.card-flex {
   border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.hide-modal {
+.hide {
   display: none;
 }
 
@@ -579,6 +589,11 @@ form.card-flex {
     border-radius: 8px;
     z-index: 2;
   }
+
+  .hide-menu {
+    visibility: hidden;
+  }
+
   .menu-item {
     margin: 0;
     padding: 1.45rem;
