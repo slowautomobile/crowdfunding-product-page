@@ -1,3 +1,5 @@
+'use strict'
+
 // Menu
 function displayMenu() {
   menu.classList.remove('hide-menu');

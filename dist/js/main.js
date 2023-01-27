@@ -1,3 +1,5 @@
+'use strict'
+
 // Menu elements
 const menu = document.querySelector('.menu');
 const menuBar = document.getElementById('menu-bar');
@@ -113,8 +115,8 @@ radioBtns.forEach((radioBtn, i) => {
 });
 
 // Get text input and buttons
-confirmPledges = document.getElementsByClassName('confirm-pledge');
-inputBtns = document.getElementsByClassName('input-btn');
+const confirmPledges = document.getElementsByClassName('confirm-pledge');
+const inputBtns = document.getElementsByClassName('input-btn');
 
 for (let i = 0; i < confirmPledges.length; i++) {
   confirmPledges[i].addEventListener('click', () => {
